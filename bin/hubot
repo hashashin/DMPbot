@@ -8,7 +8,7 @@ export HUBOT_GITHUB_REPO="TehGimp/KerbalMultiPlayer"
 export HUBOT_GITHUB_TOKEN="a106697483a72c18c25170777b26ccf56cf52a00"
 export HUBOT_AUTH_ADMIN="hashashin"
 
-npm install
+#npm install
 export PATH="node_modules/.bin:node_modules/hubot/node_modules/.bin:$PATH"
 
 exec node_modules/.bin/hubot "$@"
