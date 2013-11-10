@@ -27,7 +27,7 @@
     "underscore": ">= 0.0.1",
     "githubot": ">= 0.0.1",
     "underscore.string": ">= 0.0.1",
-    "date-utils": ">= 0.0.1"
+    "date-utils": ">= 0.0.1",
     "pg": ">= 0.0.1"
   },
   "engines": {
