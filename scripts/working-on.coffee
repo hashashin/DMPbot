@@ -16,7 +16,7 @@
 
 module.exports = (robot) ->
 
-  robot.respond /(what\'s|what is|whats) @?([\w .\-]+) working on(\?)?$/i, (msg) ->
+  robot.respond /what is @?([\w .\-]+) working on(\?)?$/i, (msg) ->
     name = msg.match[1].trim()
 
     if name is "you"
@@ -58,4 +58,3 @@ module.exports = (robot) ->
       msg.send "I found #{user.length} people named #{name}"
     else
       msg.send "I have never met #{name}"
-
