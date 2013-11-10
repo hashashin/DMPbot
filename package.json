@@ -29,6 +29,8 @@
     "underscore.string": ">= 0.0.1",
     "date-utils": ">= 0.0.1",
     "pg": ">= 0.0.1"
+    "jsdom": ">= 0.0.1",
+    "handlebars": ">= 0.0.1"
   },
   "engines": {
     "node": ">= 0.8.x",
