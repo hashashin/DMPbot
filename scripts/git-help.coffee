@@ -18,6 +18,7 @@ jsdom = require("jsdom").jsdom
 
 module.exports = (robot) ->
   robot.respond /git help (.+)$/i, (msg) ->
+    replyto = msg.message.user.name
     topic = msg.match[1].toLowerCase()
 
     url = 'http://git-scm.com/docs/git-' + topic
@@ -35,8 +36,8 @@ module.exports = (robot) ->
       desc = $.trim $('#_synopsis + .sectionbody').text()
 
       if name and desc
-        msg.send name
-        msg.send desc
-        msg.send "See #{url} for details."
+        robot.send({user: {name: replyto}}, name)
+        robot.send({user: {name: replyto}}, desc)
+        robot.send({user: {name: replyto}}, "See #{url} for details.")
       else
         msg.send "No git help page found for #{topic}."

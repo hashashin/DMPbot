@@ -52,6 +52,7 @@ helpContents = (name, commands) ->
 
 module.exports = (robot) ->
   robot.respond /help\s*(.*)?$/i, (msg) ->
+    replyto = msg.message.user.name
     cmds = robot.helpCommands()
     filter = msg.match[1]
 
@@ -69,7 +70,7 @@ module.exports = (robot) ->
 
     emit = cmds.join "\n"
 
-    msg.send emit
+    robot.send({user: {name: replyto}}, emit)
 
   robot.router.get "/#{robot.name}/help", (req, res) ->
     cmds = robot.helpCommands().map (cmd) ->

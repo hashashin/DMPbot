@@ -17,6 +17,7 @@
 module.exports = (robot) ->
 
   robot.respond /what is @?([\w .\-]+) working on(\?)?$/i, (msg) ->
+    replyto = msg.message.user.name
     name = msg.match[1].trim()
 
     if name is "you"
@@ -32,7 +33,7 @@ module.exports = (robot) ->
           else
               messageText += ""
       if messageText.trim() is "" then messageText = "Nobody told me a thing."
-      msg.send messageText
+      robot.send({user: {name: replyto}}, messageText)
     else
       users = robot.brain.usersForFuzzyName(name)
       if users.length is 1
