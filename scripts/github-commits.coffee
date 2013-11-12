@@ -4,6 +4,7 @@
 # Dependencies:
 #   "url": ""
 #   "querystring": ""
+#   "gitio2": "2.0.0"
 #
 # Configuration:
 #   Just put this url <HUBOT_URL>:<PORT>/hubot/gh-commits?room=<room> into you'r github hooks
@@ -19,6 +20,7 @@
 
 url = require('url')
 querystring = require('querystring')
+gitio = require('gitio2')
 
 module.exports = (robot) ->
 
@@ -37,10 +39,11 @@ module.exports = (robot) ->
 
       if payload.commits.length > 0
         robot.send user, "Got #{payload.commits.length} new #{pluralize('commit', payload.commits.length)}" + 
-        " to #{payload.repository.name} on branch #{branch}"
+          " to #{payload.repository.name} on branch #{branch}"
         for commit in payload.commits
           do (commit) ->
-            robot.send user, "  * #{commit.author.name}: #{commit.message} -- #{commit.url}"
+            gitio commit.url, (err, data) -> 
+              robot.send user, "  * #{commit.author.name}: #{commit.message} (#{if err then commit.url else data})"
       else
         if payload.created
           bmaster = payload.base_ref.replace(/refs\/heads\/?/, '')
