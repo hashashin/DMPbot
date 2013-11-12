@@ -43,9 +43,9 @@ module.exports = (robot) ->
             robot.send user, "  * #{commit.author.name}: #{commit.message} -- #{commit.url}"
       else
         if payload.created
-          robot.send user, "#{payload.pusher.name} created: #{payload.ref}: #{payload.base_ref}"
+          robot.send user, "#{payload.pusher.name} created: #{branch}: #{payload.master_branch}"
         if payload.deleted
-          robot.send user, "#{payload.pusher.name} deleted: #{payload.ref}"
+          robot.send user, "#{payload.pusher.name} deleted: #{branch}"
 
     catch error
       console.log "github-commits error: #{error}. Payload: #{req.body.payload}"
