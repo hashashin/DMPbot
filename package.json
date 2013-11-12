@@ -31,6 +31,8 @@
     "pg": ">= 0.0.1",
     "jsdom": ">= 0.0.1",
     "handlebars": ">= 0.0.1",
+    "url": ">= 0.0.1",
+    "querystring": ">= 0.0.1",
     "jquery": ">= 0.0.1"
   },
   "engines": {
