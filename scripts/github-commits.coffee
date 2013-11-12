@@ -33,9 +33,9 @@ module.exports = (robot) ->
 
     try
       payload = JSON.parse req.body.payload
+      branch = payload.ref.replace(/refs\/heads\/?/, '')
 
       if payload.commits.length > 0
-        branch = payload.ref.replace(/refs\/heads\/?/, '')
         robot.send user, "Got #{payload.commits.length} new #{pluralize('commit', payload.commits.length)}" + 
         " to #{payload.repository.name} on branch #{branch}"
         for commit in payload.commits
@@ -43,9 +43,10 @@ module.exports = (robot) ->
             robot.send user, "  * #{commit.author.name}: #{commit.message} -- #{commit.url}"
       else
         if payload.created
-          robot.send user, "#{payload.pusher.name} created: #{branch}: #{payload.master_branch}"
+          bmaster = payload.base_ref.replace(/refs\/heads\/?/, '')
+          robot.send user, "#{payload.pusher.name} created: branch #{branch} from #{bmaster}"
         if payload.deleted
-          robot.send user, "#{payload.pusher.name} deleted: #{branch}"
+          robot.send user, "#{payload.pusher.name} deleted: branch #{branch}"
 
     catch error
       console.log "github-commits error: #{error}. Payload: #{req.body.payload}"
