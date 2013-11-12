@@ -4,7 +4,6 @@
 # Dependencies:
 #   "url": ""
 #   "querystring": ""
-#   "gitio": "1.0.1"
 #
 # Configuration:
 #   Just put this url <HUBOT_URL>:<PORT>/hubot/gh-commits?room=<room> into you'r github hooks
@@ -20,7 +19,6 @@
 
 url = require('url')
 querystring = require('querystring')
-#gitio = require('gitio')
 
 module.exports = (robot) ->
 
@@ -37,11 +35,12 @@ module.exports = (robot) ->
       payload = JSON.parse req.body.payload
 
       if payload.commits.length > 0
-        robot.send user, "Got #{payload.commits.length} new commits from #{payload.commits[0].author.name} on #{payload.repository.name}"
+        branch = payload.ref.replace(/refs\/heads\/?/, '')
+        robot.send user, "Got #{payload.commits.length} new #{pluralize('commit', payload.commits.length)}" + 
+        " to #{payload.repository.name} on branch #{branch}"
         for commit in payload.commits
           do (commit) ->
-            #gitio commit.url, (err, data) ->
-            robot.send user, "  * #{commit.message} -- #{commit.url}"
+            robot.send user, "  * #{commit.author.name}: #{commit.message} -- #{commit.url}"
       else
         if payload.created
           robot.send user, "#{payload.pusher.name} created: #{payload.ref}: #{payload.base_ref}"
@@ -51,3 +50,6 @@ module.exports = (robot) ->
     catch error
       console.log "github-commits error: #{error}. Payload: #{req.body.payload}"
 
+# not too smart, but it does what we need
+pluralize = (word, num) ->
+  word + (if num > 1 then 's' else '')
