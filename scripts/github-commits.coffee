@@ -20,7 +20,7 @@
 
 url = require('url')
 querystring = require('querystring')
-gitio = require('gitio')
+#gitio = require('gitio')
 
 module.exports = (robot) ->
 
@@ -40,8 +40,8 @@ module.exports = (robot) ->
         robot.send user, "Got #{payload.commits.length} new commits from #{payload.commits[0].author.name} on #{payload.repository.name}"
         for commit in payload.commits
           do (commit) ->
-            gitio commit.url, (err, data) ->
-              robot.send user, "  * #{commit.message} (#{if err then commit.url else data})"
+            #gitio commit.url, (err, data) ->
+            robot.send user, "  * #{commit.message} -- #{commit.url}"
       else
         if payload.created
           robot.send user, "#{payload.pusher.name} created: #{payload.ref}: #{payload.base_ref}"
