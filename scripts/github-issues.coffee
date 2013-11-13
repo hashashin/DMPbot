@@ -76,6 +76,7 @@ complete_assignee = (msg, name) ->
 module.exports = (robot) ->
   github = require("githubot")(robot)
   robot.respond ASK_REGEX, (msg) ->
+    replyto = msg.message.user.name
     criteria = parse_criteria msg.message.text
     criteria.repo = github.qualified_repo criteria.repo
     criteria.assignee = complete_assignee msg, criteria.assignee if criteria.assignee?
@@ -94,6 +95,6 @@ module.exports = (robot) ->
         for issue in issues
           labels = ("##{label.name}" for label in issue.labels).join(" ")
           assignee = if issue.assignee then " (#{issue.assignee.login})" else ""
-          msg.send "[#{issue.number}] #{issue.title} #{labels}#{assignee} = #{issue.html_url}"
+          robot.send({user: {name: replyto}}, "#{issue.number} #{issue.title} #{labels}#{assignee} = #{issue.html_url}")
 
 # require('../../test/scripts/github-issues_test').test parse_criteria
