@@ -1,11 +1,4 @@
 #!/bin/sh
-export HUBOT_IRC_SERVER=portlane.esper.net 
-export HUBOT_IRC_ROOMS="#KMP" 
-export HUBOT_IRC_NICK="KMPbot" 
-export HUBOT_IRC_UNFLOOD="true"
-export HUBOT_IRC_PRIVATE="true"
-export HUBOT_GITHUB_REPO="TehGimp/KerbalMultiPlayer"
-export HUBOT_GITHUB_TOKEN="a106697483a72c18c25170777b26ccf56cf52a00"
 export HUBOT_AUTH_ADMIN="hashashin"
 
 npm install
