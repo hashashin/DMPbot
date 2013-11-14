@@ -8,7 +8,7 @@
 #   HUBOT_GITHUB_LINE_LINK_IGNORE_USERS
 #
 # Commands:
-#  "filepath" lines # to #
+#  "filepath" lines # to # - show a url highlighting the desired lines, filepath is case sensitive
 #
 # Author:
 #   hashashin

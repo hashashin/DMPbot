@@ -8,7 +8,7 @@
 #   HUBOT_GITHUB_TAG_LINK_IGNORE_USERS
 #
 # Commands:
-#  tag vX.X.X.X
+#  tag vX.X.X.X - show the url to desired tag
 #
 # Author:
 #   hashashin
