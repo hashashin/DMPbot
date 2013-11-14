@@ -33,7 +33,9 @@
     "handlebars": ">= 0.0.1",
     "url": ">= 0.0.1",
     "querystring": ">= 0.0.1",
-    "jquery": ">= 0.0.1"
+    "jquery": ">= 0.0.1",
+    "soupselect": ">= 0.2.0",
+    "htmlparser": ">= 1.7.6"
   },
   "engines": {
     "node": ">= 0.8.x",
