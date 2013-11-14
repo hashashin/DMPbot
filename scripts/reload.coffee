@@ -21,24 +21,26 @@ oldCommands = null
 oldListeners = null
 
 module.exports = (robot) ->
-
+  admin = process.env.HUBOT_AUTH_ADMIN
   robot.hear /command count/i, (msg) ->
     msg.send "I am aware of #{msg.robot.commands.length} commands"
 
   robot.respond /reload all scripts/i, (msg) ->
-    try
-      oldCommands = robot.commands
-      oldListeners = robot.listeners
+    if msg.message.user.name == admin
+      try
+        oldCommands = robot.commands
+        oldListeners = robot.listeners
 
-      robot.commands = []
-      robot.listeners = []
+        robot.commands = []
+        robot.listeners = []
 
-      reloadAllScripts msg, success, (err) ->
-        msg.send err
-    catch error
-      console.log "Hubot reloader:", error
-      msg.send "Could not reload all scripts: #{error}"
-
+        reloadAllScripts msg, success, (err) ->
+          msg.send err
+      catch error
+        console.log "Hubot reloader:", error
+        msg.send "Could not reload all scripts: #{error}"
+    else
+        msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that"
 success = (msg) ->
   # Cleanup old listeners and help
   for listener in oldListeners
