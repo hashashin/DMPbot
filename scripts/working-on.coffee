@@ -10,12 +10,13 @@
 # Commands:
 #   hubot i am working on <anything> - Set what you're working on
 #   hubot what is everyone working on? - Find out what everyone is working on
+#   hubot forget my work - Delete your current work.
 #
 # Author:
 #   beezee
 
 module.exports = (robot) ->
-
+  admin = process.env.HUBOT_AUTH_ADMIN
   robot.respond /what is @?([\w .\-]+) working on(\?)?$/i, (msg) ->
     replyto = msg.message.user.name
     name = msg.match[1].trim()
@@ -59,3 +60,24 @@ module.exports = (robot) ->
       msg.send "I found #{user.length} people named #{name}"
     else
       msg.send "I have never met #{name}"
+  
+  robot.respond /forget (my|@?([\w .\-]+)) work/i, (msg) ->
+    name = msg.match[1].trim()
+    if name is "my" or name.match(msg.message.user.name)
+      try
+        delete robot.brain.data.users[msg.message.user.id].workingon
+        msg.send "Ok #{msg.message.user.name}, work data deleted"
+      catch error
+        console.log "Hubot workingon:", error
+        msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that: #{error}"
+    else 
+      if msg.message.user.name == admin
+        user = robot.brain.userForName name
+        try
+          delete robot.brain.data.users[user.id].workingon
+          msg.send "Ok master, deleted work data for #{name}"
+        catch error
+          console.log "Hubot workingon:", error
+          msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that: #{error}"
+      else
+        msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that."     
