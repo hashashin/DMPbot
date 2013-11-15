@@ -10,7 +10,7 @@
 # Commands:
 #   hubot i am working on <anything> - Set what you're working on
 #   hubot what is everyone working on? - Find out what everyone is working on
-#   hubot forget my work - Delete your current work.
+#   hubot forget my work - Delete your current working on data.
 #
 # Author:
 #   beezee
@@ -55,7 +55,7 @@ module.exports = (robot) ->
 
     if typeof user is 'object'
       user.workingon = msg.match[2]
-      msg.send "Okay #{user.name}, got it."
+      msg.send "Okay #{user.name}, got it. Remember to make me forget the work when you finish it! Use: KMPbot forget my work"
     else if typeof user.length > 1
       msg.send "I found #{user.length} people named #{name}"
     else
