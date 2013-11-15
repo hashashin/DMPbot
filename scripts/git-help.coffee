@@ -9,7 +9,7 @@
 #   None
 #
 # Commands:
-#   git help <topic>
+# hubot git help <topic>
 #
 # Author:
 #   vquaiato, Jens Jahnke
@@ -40,4 +40,4 @@ module.exports = (robot) ->
         robot.send({user: {name: replyto}}, desc)
         robot.send({user: {name: replyto}}, "See #{url} for details.")
       else
-        msg.send "No git help page found for #{topic}."
+        robot.send({user: {name: replyto}}, "No git help page found for #{topic}.")

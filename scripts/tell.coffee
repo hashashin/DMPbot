@@ -38,5 +38,5 @@ module.exports = (robot) ->
          if username.match(new RegExp "^"+recipient, "i")
            tellmessage = username + ": " + localstorage[room][recipient]
            delete localstorage[room][recipient]
-           msg.send tellmessage
+           robot.send({user: {name: username}}, tellmessage)
      return

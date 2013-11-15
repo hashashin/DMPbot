@@ -34,10 +34,11 @@ module.exports = (robot) ->
       msg.send "#{msg.match[1]}? Never heard of 'em"
   
   robot.hear /./i, (msg) ->
+    replyto = msg.message.user.name
     return unless robot.brain.data.ambushes?
     if (ambushes = robot.brain.data.ambushes[msg.message.user.name])
-      msg.send "Hey, " + msg.message.user.name + ", while you were out:"
+      robot.send({user: {name: replyto}}, "Hey, " + msg.message.user.name + ", while you were out:")
       for ambush in ambushes
-        msg.send ambush[0] + " says: " + ambush[1]
-      msg.send "That's it. You were greatly missed."
+        robot.send({user: {name: replyto}}, ambush[0] + " says: " + ambush[1])
+      robot.send({user: {name: replyto}}, "That's it. You were greatly missed.")
       delete robot.brain.data.ambushes[msg.message.user.name]

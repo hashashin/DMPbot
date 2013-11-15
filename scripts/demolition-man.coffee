@@ -48,4 +48,5 @@ module.exports = (robot) ->
   regex = new RegExp('(?:^|\\s)(' + words.join('|') + ')(?:\\s|\\.|\\?|!|$)', 'i');
 
   robot.hear regex, (msg) ->
-    msg.send 'You have been fined one credit for a violation of the kerbal morality statute.'
+    replyto = msg.message.user.name
+    robot.send({user: {name: replyto}}, "You have been fined one credit for a violation of the kerbal morality statute.")

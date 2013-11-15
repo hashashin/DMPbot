@@ -8,7 +8,7 @@
 # None
 #
 # Commands:
-# KMPbot tell me <what you want KMPbot to tell you>
+# hubot tell me <what you want KMPbot to tell you>
 #
 # Author:
 # KvickFlygarn

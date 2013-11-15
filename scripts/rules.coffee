@@ -21,9 +21,10 @@ otherRules = [
 
 module.exports = (robot) ->
   robot.respond /(what are )?the (three |3 )?(rules|laws)/i, (msg) ->
+    replyto = msg.message.user.name
     text = msg.message.text
     if text.match(/apple/i) or text.match(/dev/i)
-      msg.send otherRules.join('\n')
+      robot.send({user: {name: replyto}}, otherRules.join('\n'))
     else
-      msg.send rules.join('\n')
+      robot.send({user: {name: replyto}}, rules.join('\n'))
 
