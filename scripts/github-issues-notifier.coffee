@@ -48,6 +48,6 @@ announceIssues = (data, cb) ->
   if data.action == 'opened'
     cb "New issue ##{data.issue.number} \"#{data.issue.title}\" by #{data.issue.user.login}: #{data.issue.html_url}"
   else if data.action == 'closed'
-    cb "Issue ##{data.issue.number} \"#{data.issue.title}\" closed by #{data.issue.user.login}"
+    cb "Issue ##{data.issue.number} \"#{data.issue.title}\" by #{data.issue.user.login} closed by #{data.sender.login}"
   else if data.action == 'reopened'
-    cb "Issue ##{data.issue.number} \"#{data.issue.title}\" reopened by #{data.issue.user.login}"
+    cb "Issue ##{data.issue.number} \"#{data.issue.title}\" by #{data.issue.user.login} reopened by #{data.sender.login}"
