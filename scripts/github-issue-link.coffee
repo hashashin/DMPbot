@@ -47,8 +47,12 @@ module.exports = (robot) ->
     
     github.get "#{base_url}/repos/#{bot_github_repo}/issues/" + issue_number, (issue_obj) ->
       issue_title = issue_obj.title
+      if issue_obj.assignee == null
+        assignee = 'nobody'
+      else
+        assignee = issue_obj.assignee.login
       unless process.env.HUBOT_GITHUB_API
          url = "https://github.com"
        else
          url = base_url.replace /\/api\/v3/, ''
-       msg.send "Issue #{issue_number}: #{issue_title} #{url}/#{bot_github_repo}/issues/#{issue_number}"
+       msg.send "Issue #{issue_number}: #{issue_title} #{url}/#{bot_github_repo}/issues/#{issue_number} assignee to: #{assignee}"

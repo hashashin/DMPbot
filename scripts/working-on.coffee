@@ -55,7 +55,7 @@ module.exports = (robot) ->
 
     if typeof user is 'object'
       user.workingon = msg.match[2]
-      robot.send({user: {name: name}},"Okay #{user.name}, got it. Remember to make me forget the work when you finish it! Use: KMPbot forget my work")
+      robot.send({user: {name: name}},"Okay #{user.name}, got it. Remember to make me forget the work when you finish it! Use: /msg KMPbot forget my work")
     else if typeof user.length > 1
       msg.send "I found #{user.length} people named #{name}"
     else
@@ -63,21 +63,22 @@ module.exports = (robot) ->
   
   robot.respond /forget (my|@?([\w .\-]+)) work/i, (msg) ->
     name = msg.match[1].trim()
-    if name is "my" or name.match(msg.message.user.name)
+    if name is "my" or name.match(msg.message.user.reply_to)
       try
-        delete robot.brain.data.users[msg.message.user.id].workingon
-        msg.send "Ok #{msg.message.user.name}, work data deleted"
+        user = robot.brain.userForName msg.message.user.reply_to
+        delete robot.brain.data.users[user.id].workingon
+        msg.send "Ok #{msg.message.user.reply_to}, work data deleted"
       catch error
         console.log "Hubot workingon:", error
-        msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that: #{error}"
+        msg.send "Try again by query me please."
     else 
-      if msg.message.user.name == admin
+      if msg.message.user.reply_to == admin
         user = robot.brain.userForName name
         try
           delete robot.brain.data.users[user.id].workingon
           msg.send "Ok master, deleted work data for #{name}"
         catch error
           console.log "Hubot workingon:", error
-          msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that: #{error}"
+          msg.send "Try again by query me please."
       else
         msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that."     
