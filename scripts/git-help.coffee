@@ -33,8 +33,9 @@ module.exports = (robot) ->
 
       $ = require("jquery").create(window)
       name = $.trim $('#header .sectionbody .paragraph').text()
-      desc = $.trim $('#_synopsis + .sectionbody').text()
-
+      desc = $.trim $('#_synopsis + .verseblock').text()
+      if desc == ''
+        desc = $.trim $('#_synopsis + .sectionbody').text()
       if name and desc
         robot.send({user: {name: replyto}}, name)
         robot.send({user: {name: replyto}}, desc)
