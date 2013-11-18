@@ -55,4 +55,4 @@ module.exports = (robot) ->
          url = "https://github.com"
        else
          url = base_url.replace /\/api\/v3/, ''
-       msg.send "Issue #{issue_number}: #{issue_title} #{url}/#{bot_github_repo}/issues/#{issue_number} assignee to: #{assignee}"
+       msg.send "Issue #{issue_number}, assigned to: #{assignee}: #{issue_title} #{url}/#{bot_github_repo}/issues/#{issue_number}"
