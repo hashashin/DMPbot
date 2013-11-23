@@ -85,6 +85,11 @@ module.exports = (robot) ->
       if err?
         console.log "#{href} : #{err}"
 
+  robot.respond /delete links/i, (msg) ->
+    delete robot.brain.data.urls
+    msg.reply "Done"
+
+
 # Classes
 
 class Url
