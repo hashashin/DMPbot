@@ -1,1 +1,1 @@
-web: bin/hubot -a irc -n KMPbot --alias '!'
+web: bin/hubot -a irc -n KMPbot --alias "!"
