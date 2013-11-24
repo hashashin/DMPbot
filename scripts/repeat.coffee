@@ -1,5 +1,5 @@
 # Description:
-# Hubot enjoys delicious snacks
+# KMPbot will say anything!
 #
 # Dependencies:
 # None
