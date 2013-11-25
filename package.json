@@ -36,7 +36,7 @@
     "jquery": ">= 0.0.1",
     "soupselect": ">= 0.2.0",
     "htmlparser": ">= 1.7.6",
-    "xml2js": "0.1.14"
+    "xml2js": ">= 0.1.14"
   },
   "engines": {
     "node": ">= 0.8.x",
