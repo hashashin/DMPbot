@@ -39,6 +39,6 @@ module.exports = (robot) ->
     if (ambushes = robot.brain.data.ambushes[msg.message.user.name])
       robot.send({user: {name: replyto}}, "Hey, " + msg.message.user.name + ", while you were out:")
       for ambush in ambushes
-        robot.send({user: {name: replyto}}, ambush[0] + " says: " + ambush[1])
+        robot.send({user: {name: replyto}}, ambush[0] + " said: " + ambush[1])
       robot.send({user: {name: replyto}}, "That's it. You were greatly missed.")
       delete robot.brain.data.ambushes[msg.message.user.name]
