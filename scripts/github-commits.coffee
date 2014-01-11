@@ -43,7 +43,7 @@ module.exports = (robot) ->
         for commit in payload.commits
           do (commit) ->
             gitio commit.url, (err, data) -> 
-              robot.send user, "  * #{commit.author.name}: #{commit.message} (#{if err then commit.url else data})"
+              robot.send user, "  * #{commit.author.name}: #{commit.message} #{if err then commit.url else data}"
       else
         if payload.created
           bmaster = payload.base_ref.replace(/refs\/heads\/?/, '')
