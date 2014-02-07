@@ -37,7 +37,8 @@
     "soupselect": ">= 0.2.0",
     "htmlparser": ">= 1.7.6",
     "xml2js": ">= 0.1.14",
-    "hubot-podbaydoors": "1.0.*"
+    "hubot-podbaydoors": ">= 0.0.1",
+    "cleverbot-node": "0.1.2"
   },
   "engines": {
     "node": ">= 0.8.x",
