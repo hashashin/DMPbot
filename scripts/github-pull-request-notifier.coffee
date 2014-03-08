@@ -40,7 +40,7 @@ module.exports = (robot) ->
       robot.messageRoom room, "Whoa, I got an error: #{error}"
       console.log "github pull request notifier error: #{error}. Request: #{req.body}"
 
-    res.end ""
+    res.send 200
 
 
 announcePullRequest = (data, cb) ->
