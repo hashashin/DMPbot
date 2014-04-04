@@ -32,6 +32,7 @@ module.exports = (robot) ->
     query = querystring.parse(url.parse(req.url).query)
 
     res.send 200
+    res.end ""
 
     user = {}
     user.room = query.room if query.room
