@@ -1,6 +1,6 @@
 {
   "name": "hosted-hubot",
-  "version": "2.6.3",
+  "version": "2.7.3",
   "author": "GitHub Inc.",
   "keywords": [
     "github",
@@ -20,7 +20,7 @@
     "url": "https://github.com/github/hubot.git"
   },
   "dependencies": {
-    "hubot": ">= 2.6.0 < 3.0.0",
+    "hubot": ">= 2.7.3 < 3.0.0",
     "hubot-scripts": ">= 2.5.0 < 3.0.0",
     "hubot-irc": "~0.1.19",
     "gitio2": ">= 2.0.0",
@@ -40,7 +40,8 @@
     "hubot-podbaydoors": ">= 0.0.1",
     "cleverbot-node": ">= 0.1.2",
     "hubot-bropages": ">= 0.0.1",
-    "scraper": "0.0.9"
+    "scraper": "0.0.9",
+    "hubot-auth": ">= 0.0.1"
   },
   "engines": {
     "node": ">= 0.8.x",
