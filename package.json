@@ -39,7 +39,8 @@
     "cleverbot-node": ">= 0.1.2",
     "hubot-bropages": ">= 0.0.1",
     "scraper": "0.0.9",
-    "hubot-auth": ">= 0.0.1"
+    "hubot-auth": ">= 0.0.1",
+    "flip": "~0.1.0"
   },
   "engines": {
     "node": ">= 0.8.x",
