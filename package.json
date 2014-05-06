@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "hubot": ">= 2.7.3 < 3.0.0",
-    "hubot-scripts": ">= 2.5.11 < 3.0.0",
+    "hubot-scripts": ">= 2.5.12 < 3.0.0",
     "hubot-irc": ">= 0.1.19",
     "gitio2": ">= 2.0.0",
     "underscore": ">= 0.0.1",
@@ -40,7 +40,8 @@
     "hubot-bropages": ">= 0.0.1",
     "scraper": "0.0.9",
     "hubot-auth": ">= 0.0.1",
-    "flip": "~0.1.0"
+    "flip": "~0.1.0",
+    "hubot-tell": "*"
   },
   "engines": {
     "node": ">= 0.8.x",
