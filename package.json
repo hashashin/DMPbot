@@ -20,8 +20,8 @@
     "url": "https://github.com/github/hubot.git"
   },
   "dependencies": {
-    "hubot": ">= 2.7.3 < 3.0.0",
-    "hubot-scripts": ">= 2.5.12 < 3.0.0",
+    "hubot": ">= 2.7.5 < 3.0.0",
+    "hubot-scripts": ">= 2.5.14 < 3.0.0",
     "hubot-irc": ">= 0.1.19",
     "gitio2": ">= 2.0.0",
     "underscore": ">= 0.0.1",
