@@ -43,7 +43,7 @@
     "flip": "~0.1.0",
     "hubot-tell": "*",
     "hubot-seen": ">= 0.0.1",
-    "hashlib": "1.0.1"
+    "hashlib": ">= 1.0.1"
   },
   "engines": {
     "node": ">= 0.8.x",
