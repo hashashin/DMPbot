@@ -14,7 +14,7 @@
 #   JoshBlake (faq text)
 #   hashashin (script)
 
-faqindex = "Current FAQ keyphrases: !can't see friends, !changelog, !firewall, !http status port, !in atmosphere spawning, !port forwarding, !portforward2, !safety bubble, !science, !server ports, !spectating"
+faqindex = "Current FAQ keyphrases: !can't see friends, !changelog, !firewall, !http status port, !in atmosphere spawning, !port forwarding, !portforward2, !safety bubble, !science, !server ports, !spectating, !warpmodes"
 cantseefriends = "Some reasons you can't see your friends in DMP (brackets are faq keyphrases): one of you is in a <!safety bubble>, they aren't connected to the server, they can't connect because of <!port forwarding> or <!firewall>, <!in atmosphere spawning> not done yet."
 changelog = "To see the changes in develop, check the github master branch commit messages: https://github.com/godarklight/DarkMultiPlayer/commits/master"
 firewall = "Once you set up port forwarding on your router, you also need to configure your computer's firewall to allow connections for a port. This will vary by operating system and if you have third-party firewalls installed. Google for your specific setup, such as 'windows 8 firewall open port' or 'zonealarm firewall open port'."
