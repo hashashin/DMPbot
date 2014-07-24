@@ -26,6 +26,7 @@ safetybubble = "The safety bubble is a 100m area around the launch pad and runwa
 science = "On career mode servers science is saved per user. Shared science among users is not implemented yet. The release servers may or may not have some science saving bugs that are fixed in the latest dev version."
 serverports = "DMPServer.exe uses port 6702 by default for game communication and an optional http port for public server status. To set up a server that other people can see, you need to make sure the public internet can connect to your computer. For a home computer, this involves configuring your PC firewall and also setting up port forwarding on your router. See also: !port forwarding, !http status port, !firewall."
 spectating = "You can spectate other players by switching to the same ship as them using map view or the tracking station. When you spectate, you can see what their ship is doing but cannot control it. If they leave the vessel, you will get control."
+warpmodes = "Please read https://github.com/godarklight/DarkMultiPlayer#warpmode"
 
 module.exports = (robot) ->
   robot.respond /faq/i, (msg) ->
@@ -52,5 +53,5 @@ module.exports = (robot) ->
     msg.send serverports
   robot.respond /spectating/i, (msg) ->
     msg.send spectating
-
-
+  robot.respond /warpmodes/i, (msg) ->
+    msg.send warpmodes
