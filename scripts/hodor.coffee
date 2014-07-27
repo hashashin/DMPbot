@@ -15,7 +15,7 @@
 
 module.exports = (robot) ->
   cronJob = require('cron').CronJob
-  new cronJob('0 */59 * * * *', everyHour(robot), null, true)
+  new cronJob('00 59 * * * *', everyHour(robot), null, true)
 
 everyHour = (robot) ->
   -> robot.messageRoom '#DMP', 'Hodor!'
