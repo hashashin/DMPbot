@@ -100,6 +100,10 @@ module.exports = (robot) ->
     if username.match(new RegExp "DMPUser_*", "i")
       last = seen.last "darklight"
       if last.date
-        date_string = "at #{new Date(last.date)}"
+        date_string = if config.use_timeago?
+          timeago = require 'timeago'
+          timeago(new Date(last.date))
+        else
+          "at #{new Date(last.date)}"
         msg.send "Darklight was last seen #{date_string}"	
     return  
