@@ -42,7 +42,7 @@
     "hubot-auth": ">= 0.0.1",
     "flip": "~0.1.0",
     "hubot-tell": "*",
-    "hubot-seen": ">= 0.0.1",
+    "timeago": "^0.1.0",
     "cron": ">= 0.0.1"
   },
   "engines": {
