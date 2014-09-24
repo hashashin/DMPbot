@@ -1,14 +1,14 @@
 {
-  "name": "hosted-hubot",
-  "version": "2.7.3",
-  "author": "GitHub Inc.",
+  "name": "DMPBot",
+  "version": "1.0.0",
+  "author": "hashashin",
   "keywords": [
     "github",
     "hubot",
-    "campfire",
+    "dmp",
     "bot"
   ],
-  "description": "A simple helpful robot for your Company",
+  "description": "Hubot assistant for #DMP at EsperNet.",
   "licenses": [
     {
       "type": "MIT",
