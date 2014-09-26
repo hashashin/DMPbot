@@ -14,9 +14,9 @@ rules = [
   ]
 
 otherRules = [
-  "A developer may not injure Squad or, through inaction, allow Squad to come to harm.",
-  "A developer must obey any orders given to it by Squad, except where such orders would conflict with the First Law.",
-  "A developer must protect its own existence as long as such protection does not conflict with the First or Second Law."
+  "A plugin developer may not injure Squad or, through inaction, allow Squad to come to harm.",
+  "A plugin developer must obey any orders given to it by Squad, except where such orders would conflict with the First Law.",
+  "A plugin developer must protect its own existence as long as such protection does not conflict with the First or Second Law."
   ]
 
 module.exports = (robot) ->
