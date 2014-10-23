@@ -55,7 +55,7 @@ module.exports = (robot) ->
 
     if typeof user is 'object'
       user.workingon = msg.match[2]
-      robot.send({user: {name: name}},"Okay #{user.name}, got it. Remember to make me forget the work when you finish it! Use: /msg KMPbot forget my work")
+      robot.send({user: {name: name}},"Okay #{user.name}, got it. Remember to make me forget the work when you finish it! Use: /msg DMPbot forget my work")
     else if typeof user.length > 1
       msg.send "I found #{user.length} people named #{name}"
     else
