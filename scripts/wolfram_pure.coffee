@@ -29,5 +29,5 @@ askWolframAlpha = (msg, cb) ->
           result = parse_xml body
         catch err
           result = "Sorry but I do not have an answer to that question."
-        cb(result)
+        cb(err)
 
