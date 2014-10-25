@@ -14,7 +14,7 @@
 #   JoshBlake (faq text)
 #   hashashin (script)
 
-faqindex = "Current FAQ keyphrases: !can't see friends, !changelog, !firewall, !http status port, !in atmosphere spawning, !port forwarding, !portforward2, !safety bubble, !science, !server ports, !spectating, !warpmodes"
+faqindex = "Current FAQ keyphrases: !can't see friends, !changelog, !firewall, !http status port, !in atmosphere spawning, !mods, !port forwarding, !portforward2, !safety bubble, !science, !server ports, !spectating, !warpmodes"
 cantseefriends = "Some reasons you can't see your friends in DMP (brackets are faq keyphrases): one of you is in a <!safety bubble>, they aren't connected to the server, they can't connect because of <!port forwarding> or <!firewall>, <!in atmosphere spawning> not done yet."
 changelog = "To see the changes in develop, check the github master branch commit messages: https://github.com/godarklight/DarkMultiPlayer/commits/master"
 firewall = "Once you set up port forwarding on your router, you also need to configure your computer's firewall to allow connections for a port. This will vary by operating system and if you have third-party firewalls installed. Google for your specific setup, such as 'windows 8 firewall open port' or 'zonealarm firewall open port'."
@@ -27,6 +27,7 @@ science = "On career mode servers science is saved per user. Shared science amon
 serverports = "DMPServer.exe uses port 6702 by default for game communication and an optional http port for public server status. To set up a server that other people can see, you need to make sure the public internet can connect to your computer. For a home computer, this involves configuring your PC firewall and also setting up port forwarding on your router. See also: !port forwarding, !http status port, !firewall."
 spectating = "You can spectate other players by switching to the same ship as them using map view or the tracking station. When you spectate, you can see what their ship is doing but cannot control it. If they leave the vessel, you will get control."
 warpmodes = "Please read https://github.com/godarklight/DarkMultiPlayer#warpmode"
+mods = "DMPServer uses DMPModControl.txt to control mods and parts allowed to sync to the server. A DMPModControl.txt file can be generated from your KSP install by opening the client options window and hitting 'Generate DMPModControl.txt'. Blacklist is less restrictive and is recommended for private servers."
 
 module.exports = (robot) ->
   robot.respond /faq/i, (msg) ->
@@ -55,3 +56,5 @@ module.exports = (robot) ->
     msg.send spectating
   robot.respond /warpmodes/i, (msg) ->
     msg.send warpmodes
+  robot.respond /mods/i, (msg) ->
+    msg.send mods
