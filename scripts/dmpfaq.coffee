@@ -14,7 +14,7 @@
 #   JoshBlake (faq text)
 #   hashashin (script)
 
-faqindex = "Current FAQ keyphrases: !can't see friends, !changelog, !firewall, !http status port, !in atmosphere spawning, !mods, !port forwarding, !portforward2, !safety bubble, !science, !server ports, !spectating, !warpmodes"
+faqindex = "Current FAQ keyphrases: !can't see friends, !changelog, !firewall, !http status port, !in atmosphere spawning, !mods, !logfile, !port forwarding, !portforward2, !safety bubble, !science, !server ports, !spectating, !warpmodes"
 cantseefriends = "Some reasons you can't see your friends in DMP (brackets are faq keyphrases): one of you is in a <!safety bubble>, they aren't connected to the server, they can't connect because of <!port forwarding> or <!firewall>, <!in atmosphere spawning> not done yet."
 changelog = "To see the changes in develop, check the github master branch commit messages: https://github.com/godarklight/DarkMultiPlayer/commits/master"
 firewall = "Once you set up port forwarding on your router, you also need to configure your computer's firewall to allow connections for a port. This will vary by operating system and if you have third-party firewalls installed. Google for your specific setup, such as 'windows 8 firewall open port' or 'zonealarm firewall open port'."
@@ -28,7 +28,7 @@ serverports = "DMPServer.exe uses port 6702 by default for game communication an
 spectating = "You can spectate other players by switching to the same ship as them using map view or the tracking station. When you spectate, you can see what their ship is doing but cannot control it. If they leave the vessel, you will get control."
 warpmodes = "Please read https://github.com/godarklight/DarkMultiPlayer#warpmode"
 mods = "DMPServer uses DMPModControl.txt to control mods and parts allowed to sync to the server. A DMPModControl.txt file can be generated from your KSP install by opening the client options window and hitting 'Generate DMPModControl.txt'. Blacklist is less restrictive and is recommended for private servers."
-logfile = "The ksp log file is located in the 32bits version in 'KSP/KSP_DATA/output_log.txt' and in the 64bits version in 'KSP/KSP_x64_DATA/output_log.txt'. You can upload that file to pastebin.com or similar."
+logfile = "The ksp log file is located in the 32bits version in 'KSP/KSP_DATA/output_log.txt' and in the 64bits version in 'KSP/KSP_x64_DATA/output_log.txt'. You can upload that file to pastebin.com or similar and paste the link in the channel."
 
 module.exports = (robot) ->
   robot.respond /faq/i, (msg) ->
