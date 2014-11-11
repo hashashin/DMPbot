@@ -44,8 +44,7 @@
     "hubot-tell": "*",
     "timeago": "^0.1.0",
     "cron": ">= 0.0.1",
-    "wolfram": ">= 0.3.0",
-    "hubot-marvin": ">= 0.0.2"
+    "wolfram": ">= 0.3.0"
   },
   "engines": {
     "node": ">= 0.8.x",
