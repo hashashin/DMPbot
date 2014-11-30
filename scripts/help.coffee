@@ -53,7 +53,7 @@ helpContents = (name, commands) ->
 module.exports = (robot) ->
   robot.respond /help\s*(.*)?$/i, (msg) ->
     username = msg.message.user.name
-    helpweburl = "http://dmpbot.herokuapp/dmpbot/help"
+    helpweburl = "http://dmpbot.herokuapp.com/dmpbot/help"
     helpmsg = username + ": " + helpweburl
     msg.send helpmsg
 
