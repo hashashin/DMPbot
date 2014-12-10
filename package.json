@@ -38,7 +38,7 @@
     "hubot-podbaydoors": ">= 0.0.1",
     "cleverbot-node": ">= 0.1.2",
     "hubot-bropages": ">= 0.0.1",
-    "scraper": "0.0.9",
+    "scraper": "https://github.com/ifit/node-scraper/tarball/master",
     "hubot-auth": ">= 0.0.1",
     "flip": "~0.1.0",
     "hubot-tell": "*",
