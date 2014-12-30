@@ -97,7 +97,7 @@ module.exports = (robot) ->
   robot.enter (msg) ->
     username = msg.message.user.name
     room = msg.message.user.room
-    if username.match(new RegExp "DMPUser_*", "i")
+    if username.match(new RegExp ".*_kerman", "i")
       last = seen.last "darklight"
       if last.date
         date_string = if config.use_timeago?
