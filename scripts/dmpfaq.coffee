@@ -28,7 +28,7 @@ serverports = "DMPServer.exe uses port 6702 by default for game communication an
 spectating = "You can spectate other players by switching to the same ship as them using map view or the tracking station. When you spectate, you can see what their ship is doing but cannot control it. If they leave the vessel, you will get control."
 warpmodes = "Please read https://github.com/godarklight/DarkMultiPlayer#warpmode"
 mods = "DMPServer uses DMPModControl.txt to control mods and parts allowed to sync to the server. A DMPModControl.txt file can be generated from your KSP install by opening the client options window and hitting 'Generate DMPModControl.txt'. Blacklist is less restrictive and is recommended for private servers."
-logfile = "The ksp log file is located in the 32bits version in 'KSP/KSP_DATA/output_log.txt' and in the 64bits version in 'KSP/KSP_x64_DATA/output_log.txt'. You can upload that file to pastebin.com or similar and paste the link in the channel."
+logfile = "The ksp log file is located 'KSP/KSP.log'. You can upload that file to pastebin.com or similar and paste the link in the channel."
 
 module.exports = (robot) ->
   robot.respond /faq/i, (msg) ->
