@@ -1,0 +1,15 @@
+logo: https://hubot.github.com/assets/images/layout/hubot-avatar@2x.png
+delay: 5
+branch:
+  - master
+stats:
+  - url: https://dmpbot.herokuapp.com/hubot/statistics/name
+    icon: octicon octicon-hubot
+  - url: https://dmpbot.herokuapp.com/hubot/statistics/commands
+    icon: octicon octicon-terminal
+  - url: https://dmpbot.herokuapp.com/hubot/statistics/online
+    icon: octicon octicon-clock
+  - url: https://dmpbot.herokuapp.com/hubot/statistics/version
+    icon: octicon octicon-tag
+  - url: https://dmpbot.herokuapp.com/hubot/statistics/adapter
+    icon: octicon octicon-plug
