@@ -37,6 +37,7 @@
     "hubot-bropages": ">= 0.0.1",
     "hubot-in-space": ">= 2.0.0",
     "hubot-irc": ">= 0.1.19",
+    "hubot-kerbal-stuff": "0.0.1",
     "hubot-podbaydoors": ">= 0.0.1",
     "hubot-scripts": ">= 2.16.2 < 3.0.0",
     "hubot-statistics": "^1.2.2",
