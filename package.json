@@ -54,11 +54,11 @@
     "timeago": "^0.1.0",
     "underscore": ">= 0.0.1",
     "underscore.string": ">= 0.0.1",
-    "wolfram": ">= 0.3.0",
-    "xml2js": ">= 0.1.14"
+    "wolfram": "https://github.com/hashashin/node-wolfram/tarball/master",
+    "libxmljs": "^0.18.2"
   },
   "engines": {
-    "node": ">= 0.8.x < 0.11",
-    "npm": ">= 1.1.x"
+    "node": "6.9.4",
+    "npm": "3.10.10"
   }
 }
