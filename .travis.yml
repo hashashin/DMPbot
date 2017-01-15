@@ -9,3 +9,6 @@ matrix:
 notifications:
   webhooks: https://ambrosio-tele.herokuapp.com/ambrosio_bot/travisci/133188453
   on_start: true
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y libicu-dev
