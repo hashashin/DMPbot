@@ -1,17 +1,19 @@
 language: node_js
 node_js:
    - "6.9.4"
+cache:
+  directories:
+    - node_modules
 matrix:
   allow_failures:
-    - node_js: "0.6"
-    - node_js: "0.8"
+    - node_js: "7.4.0"
   fast_finish: true
 notifications:
+  email: false
   webhooks: https://ambrosio-tele.herokuapp.com/ambrosio_bot/travisci/133188453
-  on_start: true
-before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y libicu-dev
+  on_success: always # default: always
+  on_failure: always # default: always
+  on_start: always   # default: never
 env:
   - CXX=g++-4.8
 addons:
@@ -20,3 +22,4 @@ addons:
       - ubuntu-toolchain-r-test
     packages:
       - g++-4.8
+      - libicu-dev
