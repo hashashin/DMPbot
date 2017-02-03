@@ -59,7 +59,6 @@
     "wolfram": "https://github.com/hashashin/node-wolfram/tarball/master"
   },
   "engines": {
-    "node": "6.9.4",
-    "npm": "3.10.10"
+    "node": "6.9.5"
   }
 }
