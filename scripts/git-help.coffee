@@ -21,7 +21,7 @@ module.exports = (robot) ->
     replyto = msg.message.user.name
     topic = msg.match[1].toLowerCase()
 
-    url = 'http://git-scm.com/docs/git-' + topic
+    url = 'https://git-scm.com/docs/git-' + topic
     msg.http(url).get() (err, res, body) ->
       window = (jsdom body, null,
         features:
