@@ -33,6 +33,7 @@
     "hubot-auth": "^2.1.0",
     "hubot-bropages": "0.0.2",
     "hubot-flip": "^2.17.1",
+    "hubot-howdoi": "^1.0.1",
     "hubot-in-space": "^2.0.0",
     "hubot-irc": "^0.2.9",
     "hubot-kerbal-stuff": "0.0.5",
