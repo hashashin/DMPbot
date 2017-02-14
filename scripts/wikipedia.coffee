@@ -90,4 +90,4 @@ parseHTML = (html, selector) ->
   Select handler.dom, selector
 
 strCapitalize = (str) ->
-  return str.charAt(0).toUpperCase() + str.substring(1);
+  return str.charAt(0).toUpperCase() + str.substring(1)

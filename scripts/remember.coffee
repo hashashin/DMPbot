@@ -6,7 +6,7 @@
 #   hubot remember <key> is <value>. - Returns nothing. Remembers the text for next time!
 #   hubot what do you remember - Returns everything hubot remembers.
 #   hubot forget <key> - Removes key from hubots brain.
-#   hubot what are your favorite memories? - Returns a list of the most remembered memories.  
+#   hubot what are your favorite memories? - Returns a list of the most remembered memories.
 #   hubot random memory - Returns a random string
 #
 # Dependencies:

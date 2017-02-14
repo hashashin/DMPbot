@@ -22,8 +22,8 @@ module.exports = (robot) ->
 
   robot.hear /tag v(.*)/, (msg) ->
     return if msg.message.user.name.match(new RegExp(githubIgnoreUsers, "gi"))
-    
+
     tag = msg.match[1]
-    url = "https://www.github.com"    
+    url = "https://www.github.com"
     bot_github_repo = github.qualified_repo process.env.HUBOT_GITHUB_REPO
     msg.send "#{url}/#{bot_github_repo}/releases/v#{tag}"

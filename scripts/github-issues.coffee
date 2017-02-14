@@ -90,7 +90,7 @@ module.exports = (robot) ->
       issues = filter_issues issues, criteria
 
       if _.isEmpty issues
-          msg.send "No issues found."
+        msg.send "No issues found."
       else
         for issue in issues
           labels = ("##{label.name}" for label in issue.labels).join(" ")

@@ -40,7 +40,7 @@ module.exports = (robot) ->
         console.log "Hubot reloader:", error
         msg.send "Could not reload all scripts: #{error}"
     else
-        msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that"
+      msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that"
 success = (msg) ->
   # Cleanup old listeners and help
   for listener in oldListeners

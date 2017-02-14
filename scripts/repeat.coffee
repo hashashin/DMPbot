@@ -17,8 +17,7 @@
 module.exports = (robot) ->
   robot.respond /tell me (.*)/i, (msg) ->
     replyto = msg.message.user.name
-    
+
     msg = msg.match[1]
-    
+
     robot.send({user: {name: replyto}}, msg)
-    

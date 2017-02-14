@@ -15,11 +15,11 @@
 
 appendAmbush = (data, toUser, fromUser, message) ->
   data[toUser.name] or= []
-  
+
   data[toUser.name].push [fromUser.name, message]
-  
+
 module.exports = (robot) ->
-  robot.brain.on 'loaded', =>
+  robot.brain.on 'loaded', ->
     robot.brain.data.ambushes ||= {}
 
   robot.respond /ambush (.*?): (.*)/i, (msg) ->
@@ -32,7 +32,7 @@ module.exports = (robot) ->
       msg.send "Too many users like that"
     else
       msg.send "#{msg.match[1]}? Never heard of 'em"
-  
+
   robot.hear /./i, (msg) ->
     replyto = msg.message.user.name
     return unless robot.brain.data.ambushes?

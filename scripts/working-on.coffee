@@ -26,13 +26,13 @@ module.exports = (robot) ->
     else if name.toLowerCase() is robot.name.toLowerCase()
       msg.send "World domination!"
     else if name.match(/(everybody|everyone)/i)
-      messageText = '';
+      messageText = ''
       users = robot.brain.users()
       for k, u of users
-          if u.workingon
-              messageText += "#{u.name} is working on #{u.workingon}\n"
-          else
-              messageText += ""
+        if u.workingon
+          messageText += "#{u.name} is working on #{u.workingon}\n"
+        else
+          messageText += ""
       if messageText.trim() is "" then messageText = "Nobody told me a thing."
       robot.send({user: {name: replyto}}, messageText)
     else
@@ -60,7 +60,7 @@ module.exports = (robot) ->
       msg.send "I found #{user.length} people named #{name}"
     else
       msg.send "I have never met #{name}"
-  
+
   robot.respond /forget (my|@?([\w .\-]+)) work/i, (msg) ->
     name = msg.match[1].trim()
     if name is "my" or name.match(msg.message.user.reply_to)
@@ -71,7 +71,7 @@ module.exports = (robot) ->
       catch error
         console.log "Hubot workingon:", error
         msg.send "Try again by query me please."
-    else 
+    else
       if msg.message.user.reply_to == admin
         user = robot.brain.userForName name
         try
@@ -81,4 +81,4 @@ module.exports = (robot) ->
           console.log "Hubot workingon:", error
           msg.send "Try again by query me please."
       else
-        msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that."     
+        msg.send "I'm sorry #{msg.message.user.name}, I'm afraid I can't do that."

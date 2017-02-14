@@ -28,7 +28,7 @@ module.exports = (robot) ->
         num: 5
         q: msg.match[3]
       .get() (err, res, body) ->
-        resp = "";
+        resp = ""
         results = JSON.parse(body)
         if results.error
           results.error.errors.forEach (err) ->

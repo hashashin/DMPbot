@@ -39,11 +39,11 @@ module.exports = (robot) ->
       branch = payload.ref.replace(/refs\/heads\/?/, '')
 
       if payload.commits.length > 0
-        robot.send user, "Got #{payload.commits.length} new #{pluralize('commit', payload.commits.length)}" + 
+        robot.send user, "Got #{payload.commits.length} new #{pluralize('commit', payload.commits.length)}" +
           " to #{payload.repository.name} on branch #{branch}"
         for commit in payload.commits
           do (commit) ->
-            gitio commit.url, (err, data) -> 
+            gitio commit.url, (err, data) ->
               robot.send user, "  * #{commit.author.name}: #{commit.message} #{if err then commit.url else data}"
       else
         if payload.created

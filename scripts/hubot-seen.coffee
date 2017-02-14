@@ -93,7 +93,7 @@ module.exports = (robot) ->
 
       else
         msg.send "I haven't seen #{nick} around lately"
-  
+
   robot.enter (msg) ->
     username = msg.message.user.name
     room = msg.message.user.room
@@ -105,5 +105,5 @@ module.exports = (robot) ->
           timeago(new Date(last.date))
         else
           "at #{new Date(last.date)}"
-        msg.send "Darklight was last seen #{date_string}"	
-    return  
+        msg.send "Darklight was last seen #{date_string}"
+    return

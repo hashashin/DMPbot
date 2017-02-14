@@ -4,7 +4,7 @@
 # Dependencies:
 #   "date-utils": ">=1.2.5"
 #   "githubot": "0.4.x"
-# 
+#
 # Configuration:
 #   HUBOT_GITHUB_TOKEN
 #   HUBOT_GITHUB_USER
@@ -32,7 +32,7 @@ module.exports = (robot) ->
       if commits.message
         msg.send "Achievement unlocked: [NEEDLE IN A HAYSTACK] repository #{commits.message}!"
       else if commits.length == 0
-          msg.send "Achievement unlocked: [LIKE A BOSS] no commits found!"
+        msg.send "Achievement unlocked: [LIKE A BOSS] no commits found!"
       else
         msg.send "https://github.com/#{repo}"
         send = 5

@@ -4,7 +4,7 @@
 # Dependencies:
 #   "htmlparser": "1.7.6"
 #   "soupselect: "0.2.0"
-# 
+#
 # Configuration:
 #   None
 #
