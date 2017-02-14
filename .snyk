@@ -1,0 +1,14 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.7.0
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:negotiator:20160616':
+    - hubot-podbaydoors > hubot > express > connect > compression > accepts > negotiator:
+        patched: '2017-02-14T07:51:23.929Z'
+    - hubot-podbaydoors > hubot > express > connect > serve-index > accepts > negotiator:
+        patched: '2017-02-14T07:51:23.929Z'
+    - hubot > express > connect > compression > accepts > negotiator:
+        patched: '2017-02-14T07:51:23.929Z'
+    - hubot > express > connect > serve-index > accepts > negotiator:
+        patched: '2017-02-14T07:51:23.929Z'
