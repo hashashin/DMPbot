@@ -27,10 +27,6 @@
     "flip": "^1.0.0",
     "githubot": "^1.0.1",
     "gitio2": "^3.1.0",
-    "grunt": "^1.0.1",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-mocha-test": "^0.13.2",
-    "grunt-release": "^0.14.0",
     "handlebars": "^4.0.6",
     "htmlparser": "^1.7.7",
     "hubot": "^2.19.0",
@@ -45,7 +41,7 @@
     "hubot-statistics": "^1.2.2",
     "hubot-tell": "^1.2.4",
     "jquery": "^3.1.1",
-    "jsdom": "^9.10.0",
+    "jsdom": "^9.11.0",
     "libxmljs": "^0.18.4",
     "matchdep": "^1.0.1",
     "mocha": "^3.2.0",
@@ -53,13 +49,26 @@
     "scraper": "https://github.com/ifit/node-scraper/tarball/master",
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
+    "snyk": "^1.25.0",
     "soupselect": "^0.2.0",
     "timeago": "^1.5.4",
     "underscore": "^1.8.3",
     "underscore.string": "^3.3.4",
     "wolfram": "https://github.com/hashashin/node-wolfram/tarball/master"
   },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-mocha-test": "^0.13.2",
+    "grunt-release": "^0.14.0"
+  },
   "engines": {
     "node": "6.9.5"
-  }
+  },
+  "scripts": {
+    "test": "snyk test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
