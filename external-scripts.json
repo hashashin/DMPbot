@@ -1,2 +1,11 @@
-["hubot-podbaydoors", "hubot-bropages", "hubot-auth", "hubot-tell", 
-"hubot-in-space", "hubot-statistics", "hubot-kerbal-stuff", "hubot-flip", "hubot-howdoi"]
+[
+  "hubot-podbaydoors",
+  "hubot-bropages",
+  "hubot-auth",
+  "hubot-tell",
+  "hubot-in-space",
+  "hubot-statistics",
+  "hubot-kerbal-stuff",
+  "hubot-flip",
+  "hubot-howdoi",
+  "hubot-github-contribution-stats"]
