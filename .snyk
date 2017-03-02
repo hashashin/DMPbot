@@ -1,6 +1,26 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
 version: v1.7.0
-ignore: {}
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  'npm:qs:20170213':
+    - hubot > connect-multiparty > qs:
+        reason: None given
+        expires: '2017-04-01T10:24:40.141Z'
+    - hubot-podbaydoors > hubot > connect-multiparty > qs:
+        reason: None given
+        expires: '2017-04-01T10:24:40.141Z'
+    - hubot > express > connect > qs:
+        reason: None given
+        expires: '2017-04-01T10:24:40.141Z'
+    - hubot > express > connect > body-parser > qs:
+        reason: None given
+        expires: '2017-04-01T10:24:40.141Z'
+    - hubot-podbaydoors > hubot > express > connect > qs:
+        reason: None given
+        expires: '2017-04-01T10:24:40.141Z'
+    - hubot-podbaydoors > hubot > express > connect > body-parser > qs:
+        reason: None given
+        expires: '2017-04-01T10:24:40.142Z'
 # patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:negotiator:20160616':
