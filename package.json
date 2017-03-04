@@ -65,7 +65,8 @@
     "grunt-release": "^0.14.0"
   },
   "engines": {
-    "node": "6.9.5"
+    "node": "6.10.0",
+    "npm": "4.3.0"
   },
   "scripts": {
     "test": "snyk test",
