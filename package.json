@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "chai": "^3.5.0",
-    "cleverbot-node": "^0.3.3",
+    "cleverbot-node": "^0.3.5",
     "cron": "^1.2.1",
     "date-utils": "^1.2.21",
     "flip": "^1.0.0",
@@ -51,7 +51,7 @@
     "scraper": "github:gargsms/node-scraper",
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
-    "snyk": "^1.25.0",
+    "snyk": "^1.25.1",
     "soupselect": "^0.2.0",
     "timeago": "^1.5.4",
     "underscore": "^1.8.3",
